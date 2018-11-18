@@ -168,7 +168,16 @@ blockquote {
 .trans-y50 { transform: translateY(-50%) }
 .trans-x50 { transform: translateX(-50%) }
 
-img { width: 100% }
+img {
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
 
 hr {
 	border: none;
