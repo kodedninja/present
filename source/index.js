@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-devtools')())
 }
 
-app.use(require('./plugins/clicks'))
+app.use(require('./plugins/present'))
 
 app.route('*', require('./views/main'))
 

@@ -14,8 +14,4 @@ function view (state, emit) {
       </div>
     </body>
   `
-
-  function handleClick () {
-    emit('clicks:add', 1)
-  }
 }
