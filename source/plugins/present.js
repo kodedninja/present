@@ -27,15 +27,15 @@ function plugin (state, emitter) {
     return new Promise(function (resolve, reject) {
       var request = new XMLHttpRequest()
       request.open('GET', url, true)
-      request.onload = function() {
+      request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
           resolve(request.responseText)
         } else {
-          reject()
+          reject(new Error('server returned error'))
         }
       }
-      request.onerror = function() {
-        reject()
+      request.onerror = function () {
+        reject(new Error('error in the request'))
       }
       request.send()
     })

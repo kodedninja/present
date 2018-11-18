@@ -35,7 +35,7 @@ function view (state, emit) {
     `
   }
 
-  function keyup(e) {
+  function keyup (e) {
     if (e.keyCode === 37) emit('move', -1) // left
     else if (e.keyCode === 39) emit('move', 1) // right
   }
