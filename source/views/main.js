@@ -11,18 +11,23 @@ function view (state, emit) {
 
   return html`
     <body class="1 db" onkeyup="${keyup}">
-      <div class="1 h100 x xac xjc">
-        ${render()}
-      </div>
+      ${render()}
     </body>
   `
 
   function render () {
     return html`
-      <div class="xx tac">
-        ${format(slide)}
+      <div class="1 h100 x xac xjc">
+        ${slide.map(column)}
       </div>
     `
+    function column (c) {
+      return html`
+        <div class="xx tac">
+          ${format(c)}
+        </div>
+      `
+    }
   }
 
   function loading () {

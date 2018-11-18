@@ -10,7 +10,11 @@ function plugin (state, emitter) {
 
   async function loaded () {
     var res = await $get('/slides.txt')
-    state.slides = res.split('\n---\n')
+
+    state.slides = res.split('\n---\n').map(function (cols) {
+      return cols.split('|')
+    })
+
     state.loaded = true
     emitter.emit('render')
   }

@@ -30,19 +30,16 @@ a:not(.nbb) {
 	padding-bottom: 0.1em;
 }
 
-a:not(.nbb):hover {
-}
-
 /* Typography */
 
-h1, h2, h3, h4, h5, h6, .f1, .f2, .f3 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: inherit;
 }
 
 h1, .f1 { font-size: 5rem }
-h2, .f2 { font-size: 2.25rem; }
-h3, .f3 { font-size: 1.75rem; }
-h4, .f4 { font-size: 1.25rem; }
+h2, .f2 { font-size: 3.5rem; }
+h3, .f3 { font-size: 2.5rem; }
+h4, .f4 { font-size: 1.5rem; }
 h5, .f5 { font-size: 1rem; }
 .f6 { font-size: .825rem; }
 
@@ -58,9 +55,6 @@ h5, .f5 { font-size: 1rem; }
 .brw { word-wrap: break-word; }
 .bra { word-wrap: break-all; }
 
-.ffmono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace }
-.ffi { font-family: 'Inter UI', 'arial', 'helvetica neue', sans-serif }
-
 .fwb { font-weight: bold; }
 .fwn { font-weight: normal; }
 
@@ -69,17 +63,6 @@ h5, .f5 { font-size: 1rem; }
 .tcblack, .tcblack a { color: #000 }
 
 .lh1 { line-height: 1.1 }
-
-code {
-    background-color: #eee;
-    padding: 4px;
-}
-
-blockquote {
-    border-left: 4px solid #ddd;
-    padding-left: 30px;
-    color: #999;
-}
 
 /* Blocks */
 
@@ -95,9 +78,6 @@ blockquote {
 .xa{flex:auto}
 .xn{flex:none}
 
-.ofh { overflow: hidden; }
-
-.pst { position: sticky; position: -webkit-sticky; }
 .pa { position: absolute; }
 .pr { position: relative; }
 .pf { position: fixed};
@@ -126,8 +106,6 @@ blockquote {
 .auto { width: auto; }
 
 .h100 { height: 100% }
-
-.mw { max-width: 800px }
 
 .ba { border-style: solid; border-width: 1px; }
 .bt { border-top-style: solid; border-top-width: 1px; }
@@ -163,11 +141,6 @@ blockquote {
 .mb4 { margin-bottom: 6rem }
 .mxa { margin-left: auto; margin-right: auto; }
 
-.mt50 { margin-top: 50% }
-.ml50 { margin-left: 50% }
-.trans-y50 { transform: translateY(-50%) }
-.trans-x50 { transform: translateX(-50%) }
-
 img {
   max-width: 85%;
   max-height: 85%;
@@ -179,11 +152,6 @@ img {
   transform: translate(-50%,-50%);
 }
 
-hr {
-	border: none;
-	border-bottom: 1px solid #fff;
-}
-
 p, ul, ol { margin: 1.5rem 0 }
 p:first-child, ul:first-child, ol:first-child { margin-top: 0 }
 p:last-child, ul:last-child, ol:last-child { margin-bottom: 0 }
@@ -191,13 +159,5 @@ p:last-child, ul:last-child, ol:last-child { margin-bottom: 0 }
 /* Media query customs */
 
 @media (max-width: 900px) {
-	html {
-		font-size: 12px;
-	}
-
 	.m-\31 { width:100.000% }
-	.m-fl { float: left }
-
-	h1, .f1 { font-size: 4rem; }
-	h2, .f2 { font-size: 2.0rem; }
 }
