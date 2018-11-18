@@ -3,12 +3,14 @@ module.exports = plugin
 function plugin (state, emitter) {
   state.loaded = false
   state.slides = []
+  state.index = 0
 
   emitter.on('DOMContentLoaded', loaded)
 
   async function loaded () {
     var res = await $get('/slides.txt')
     state.slides = res.split('\n---\n')
+    state.loaded = true
     emitter.emit('render')
   }
 

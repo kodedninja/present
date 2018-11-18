@@ -1,7 +1,6 @@
 var css = require('sheetify')
 var choo = require('choo')
 
-css('gr8')
 css('./styles/index.css')
 
 var app = choo()
