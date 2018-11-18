@@ -4,7 +4,7 @@ md to presentation tool on the peer-to-peer web
 ## example
 
 - [dat://d488d8..69/](dat://d488d85973ed2e3966e0a1a1e12e4390784a2077bb5a30bc626d82ad698f4069/)
-- [https://present.hashbase.io/](https://present.hashbase.io/)
+- [https://present.seed.hex22.org/](https://present.seed.hex22.org/)
 
 ## usage
 1. Navigate to the DAT url of a presentation and [make an editable copy](https://beakerbrowser.com/docs/tour/#forking-or-copying-a-website)
