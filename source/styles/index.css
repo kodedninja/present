@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'AUTHENTIC Sans';
+    src: url('../../assets/fonts/AUTHENTIC-Sans.woff2') format('woff2'),
+         url('../../assets/fonts/AUTHENTIC-Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 16px }
+
+body {
+  font-family: 'AUTHENTIC Sans', arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}

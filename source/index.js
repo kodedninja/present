@@ -1,7 +1,8 @@
 var css = require('sheetify')
 var choo = require('choo')
 
-css('tachyons')
+css('gr8')
+css('./styles/index.css')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
@@ -10,7 +11,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.use(require('./plugins/clicks'))
 
-app.route('/', require('./views/main'))
-app.route('/*', require('./views/404'))
+app.route('*', require('./views/main'))
 
 module.exports = app.mount('body')
