@@ -1,3 +1,8 @@
+:root {
+	--background: #fff;
+	--text: #000;
+}
+
 @font-face {
     font-family: 'AUTHENTIC Sans';
     src: url('../../assets/fonts/AUTHENTIC-Sans.woff2') format('woff2'),
@@ -18,10 +23,13 @@ body {
   font-family: 'AUTHENTIC Sans', arial, sans-serif;
   height: 100vh;
   overflow: hidden;
+
+  background: var(--background);
+  color: var(--text);
 }
 
 a {
-	color: #000;
+	color: inherit;
 	text-decoration: none;
   opacity: 0.6;
 }
