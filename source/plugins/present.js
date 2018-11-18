@@ -15,6 +15,7 @@ function plugin (state, emitter) {
       return cols.split('|')
     })
 
+    state.index = (state.params.index === '') ? 0 : parseInt(state.params.index)
     state.loaded = true
     emitter.emit('render')
   }
@@ -23,6 +24,7 @@ function plugin (state, emitter) {
     var newindex = state.index + direction
     if (newindex >= 0 && newindex < state.slides.length) {
       state.index = newindex
+      emitter.emit(state.events.REPLACESTATE, `/${state.index > 0 ? state.index : ''}`)
       emitter.emit('render')
     }
   }

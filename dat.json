@@ -1,3 +1,4 @@
 {
-  "title": "present"
+  "title": "present",
+  "fallback_page": "index.html"
 }

@@ -6,8 +6,9 @@ module.exports = view
 function view (state, emit) {
   // loaded
   if (!state.loaded) return loading()
-
+  // incorrect url
   var slide = state.slides[state.index]
+  if (!slide) return noslide()
 
   return html`
     <body class="1 db" onkeyup="${keyup}">
@@ -30,18 +31,28 @@ function view (state, emit) {
     }
   }
 
+  function keyup (e) {
+    if (e.keyCode === 37) emit('move', -1) // left
+    else if (e.keyCode === 39) emit('move', 1) // right
+  }
+
   function loading () {
     return html`
       <body class="1 db">
-        <div class="1 h100 x xac xjc f1">
+        <div class="1 h100 x xac xjc f2">
           <div class="xx tac">loading</div>
         </div>
       </body>
     `
   }
 
-  function keyup (e) {
-    if (e.keyCode === 37) emit('move', -1) // left
-    else if (e.keyCode === 39) emit('move', 1) // right
+  function noslide () {
+    return html`
+      <body class="1 db">
+        <div class="1 h100 x xac xjc f2 tcgrey">
+          <div class="xx tac">no slide</div>
+        </div>
+      </body>
+    `
   }
 }
