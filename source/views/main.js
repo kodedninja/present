@@ -10,7 +10,7 @@ function view (state, emit) {
   var slide = state.slides[state.index]
 
   return html`
-    <body class="1 db">
+    <body class="1 db" onkeyup="${keyup}">
       <div class="1 h100 x xac xjc">
         ${render()}
       </div>
@@ -33,5 +33,10 @@ function view (state, emit) {
         </div>
       </body>
     `
+  }
+
+  function keyup(e) {
+    if (e.keyCode === 37) emit('move', -1) // left
+    else if (e.keyCode === 39) emit('move', 1) // right
   }
 }

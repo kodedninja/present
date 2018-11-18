@@ -6,12 +6,21 @@ function plugin (state, emitter) {
   state.index = 0
 
   emitter.on('DOMContentLoaded', loaded)
+  emitter.on('move', move)
 
   async function loaded () {
     var res = await $get('/slides.txt')
     state.slides = res.split('\n---\n')
     state.loaded = true
     emitter.emit('render')
+  }
+
+  function move (direction) {
+    var newindex = state.index + direction
+    if (newindex >= 0 && newindex < state.slides.length) {
+      state.index = newindex
+      emitter.emit('render')
+    }
   }
 
   function $get (url) {
