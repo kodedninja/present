@@ -18,7 +18,7 @@ function view (state, emit) {
 
   function render () {
     return html`
-      <div class="1 h100 x xac xjc">
+      <div class="4/5 m-1 mxa  h100 x xac xjc">
         ${slide.map(column)}
       </div>
     `
@@ -39,7 +39,7 @@ function view (state, emit) {
   function loading () {
     return html`
       <body class="1 db">
-        <div class="1 h100 x xac xjc f2">
+        <div class="1 h100 x xac xjc f1">
           <div class="xx tac">loading</div>
         </div>
       </body>
@@ -49,7 +49,7 @@ function view (state, emit) {
   function noslide () {
     return html`
       <body class="1 db">
-        <div class="1 h100 x xac xjc f2 tcgrey">
+        <div class="1 h100 x xac xjc f1 tcgrey">
           <div class="xx tac">no slide</div>
         </div>
       </body>

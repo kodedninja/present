@@ -9,10 +9,10 @@ function plugin (state, emitter) {
   emitter.on('move', move)
 
   async function loaded () {
-    var res = await $get('/slides.txt')
+    var res = await $get('/slides.md')
 
     state.slides = res.split('\n---\n').map(function (cols) {
-      return cols.split('|')
+      return cols.split('\n|\n')
     })
 
     state.index = (state.params.index === '') ? 0 : parseInt(state.params.index)

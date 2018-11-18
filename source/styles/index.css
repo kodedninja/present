@@ -23,11 +23,7 @@ body {
 a {
 	color: #000;
 	text-decoration: none;
-}
-
-a:not(.nbb) {
-	border-bottom: 1px solid #aaa;
-	padding-bottom: 0.1em;
+  opacity: 0.6;
 }
 
 /* Typography */
@@ -155,6 +151,10 @@ img {
 p, ul, ol { margin: 1.5rem 0 }
 p:first-child, ul:first-child, ol:first-child { margin-top: 0 }
 p:last-child, ul:last-child, ol:last-child { margin-bottom: 0 }
+
+li { margin: 1rem 0}
+li:first-child { margin-top: 0 }
+li:last-child { margin-bottom: 0 }
 
 /* Media query customs */
 
